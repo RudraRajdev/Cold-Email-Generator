@@ -85,27 +85,7 @@ Generate and view the personalized cold email.
 
 💼 Custom email creation for marketing or networking purposes
 
-📸 Screenshots/Demo
 
-(Include relevant screenshots or GIFs showcasing your project in action.)
-
-📝 Contributing
-
-We welcome contributions to this project! Follow these steps to contribute:
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature-branch).
-
-Commit your changes (git commit -m 'Add new feature').
-
-Push to the branch (git push origin feature-branch).
-
-Submit a pull request.
-
-📜 License
-
-This project is licensed under the MIT License.
 
 🌐 Connect with Me
 
