@@ -1,9 +1,8 @@
-
 import streamlit as st
 from langchain_groq import ChatGroq
 
 # Set your Groq API key here
-api_key = "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"  # Put your Groq API key
+api_key = ""  # Put your Groq API key
 
 # Check if API key is loaded properly
 if not api_key:
@@ -14,7 +13,7 @@ if not api_key:
 llm = ChatGroq(
     temperature=0,
     api_key=api_key,
-    model_name="gemma2-9b-it"
+    model_name="Gemma2-9b-it"
 )
 
 def generate_cold_email(job_role, skills, experience, past_companies):
@@ -37,13 +36,12 @@ def main():
     st.title("Cold Email Generator")
     st.write("Generate personalized cold emails based on job details.")
 
-    
-job_role = st.text_input("Job Role", "Software Engineer")
-skills = st.text_area("Skills (comma-separated)", "Python, Machine Learning, API Development").split(', ')
-experience = st.text_input("Experience (e.g., 3 years)", "3 years")
-past_companies = st.text_area("Past Companies (comma-separated)", "Google, Microsoft").split(', ')
+    job_role = st.text_input("Job Role", "")
+    skills = st.text_area("Skills (comma-separated)", "").split(', ')
+    experience = st.text_input("Experience (e.g., 3 years)", "")
+    past_companies = st.text_area("Past Companies (comma-separated)", "").split(', ')
 
-if st.button("Generate Email"):
+    if st.button("Generate Email"):
         email = generate_cold_email(job_role, skills, experience, past_companies)
         if email:
             st.subheader("Generated Cold Email")
