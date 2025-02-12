@@ -1,22 +1,20 @@
 import json
-from dotenv import load_dotenv
 import os
 from langchain_groq import ChatGroq
 
-# Load environment variables from .env file
-load_dotenv()
 
-# Get the API key
-api_key = os.getenv('GROQ_API_KEY')
+api_key=""                                                          #Put your groq api key
+
 
 # Check if API key is loaded properly
 if not api_key:
-    raise ValueError("API key is missing. Please check your .env file.")
+    raise ValueError("API key is missing.")
+
 
 # Initialize the ChatGroq instance
 llm = ChatGroq(
     temperature=0,
-    groq_api_key=api_key,
+    api_key=api_key,
     model_name="Gemma2-9b-it"
 )
 
